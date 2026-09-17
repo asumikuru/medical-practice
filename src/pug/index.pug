@@ -1,0 +1,21 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/style.css")
+    script(src="js/main.dv.js" defer)
+    title 明日未来整形外科クリニック｜模写コーディング
+  body
+    include _header.pug
+
+    main.l-main
+        include _hero.pug
+        include _nav.pug
+        include _news.pug
+        include _features.pug
+        include _medical.pug
+        include _schedule.pug
+        include _access.pug
+
+        include _footer.pug

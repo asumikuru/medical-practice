@@ -1,0 +1,41 @@
+.p-hero {
+  width: 100%;
+  height: auto;
+  // 💡1. パソコン画面の横幅いっぱいに広げ、高さは画面の「半分〜7割（500px）」をしっかり確保します
+  height: 500px; 
+  background-image: url("../../../../images/main-image.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-hero__inner {
+  width: 100%;
+  height: 100%;
+}
+
+// 💡2. キャッチコピー部分の配置（画像の上に文字を浮かせるプロの技）
+.p-hero__content {
+  position: absolute;
+  top: 50%; // 上から半分の位置
+  left: 30%; // 左からロゴと同じ50pxの位置に揃えると美しい！
+  transform: translateY(-50%); // ぴったり上下中央揃えにするおまじない
+  z-index: 10; // 文字が画像の下に隠れないように手前に出す
+}
+
+.p-hero__title {
+  font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+  font-size: 32px;
+  line-height: 2.0;
+  color: #fff; // 💡もし画像の上に載せて見えにくければ #fff (白) に変えてみてくださいね
+  font-weight: 600;
+}
+
+.p-hero__sub {
+  font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+  font-size: 20px;
+  color: #ffff;
+  margin-top: 20px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}

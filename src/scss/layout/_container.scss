@@ -1,0 +1,8 @@
+.l-container {
+  max-width: 1500px; // サイトの最大横幅（デザインに合わせて調整OK）
+  width: 100%;       // 画面幅が1100pxより狭い時は100%広がる
+  margin-right: auto; // 右側の余白を自動調整
+  margin-left: auto;  // 左側の余白を自動調整（これで中央寄せになる）
+  padding-right: 20px; // スマホ表示時に画面端に文字がくっつかないための左右余白
+  padding-left: 20px;
+}

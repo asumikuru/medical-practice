@@ -1,0 +1,20 @@
+// foundation（土台）
+@use "foundation/reset";
+@use "foundation/base";
+
+// layout（全体の枠組み）
+@use "layout/container";
+@use "layout/header";
+@use 'layout/nav'; 
+@use "layout/footer";
+
+// object/component（共通パーツ）
+@use "object/component/heading";
+
+// object/project（各セクション）
+@use "object/project/hero";
+@use "object/project/news";
+@use "object/project/features";
+@use "object/project/medical";
+@use "object/project/schedule";
+@use "object/project/access";

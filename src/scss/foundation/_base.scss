@@ -1,0 +1,9 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiRyo, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  // 文字の縦揺れ防止や滑らかな表示の設定
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,103 @@
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0px 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  
+  // 💡1. 【修正】2つに分かれていた transition を、カンマで繋げて1行にまとめると両方ちゃんと効くようになります！
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover { 
+    background-color: #555;
+    // 💡2. ここで親（li）の文字色を白にします
+    color: #fff; 
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+    font-size: 16px;
+    font-weight: 500;
+    
+    // 💡3. 【超重要！】文字色を「#333」と直接書くのではなく、「currentColor（親の色をそのまま貰う）」にします！
+    // これをしておくと、通常時は親の黒、ホバー時は親が白（#fff）に変わったのを自動で引き継いで、ふんわり色が変わります。
+    color: currentColor; 
+    
+    text-decoration: none;
+    width: 100%;
+    padding: 20px 0;
+
+    span {
+      display: block;
+      font-size: 10px;
+      
+      // 💡4. 下の英語（span）も、ホバー時に一緒に白くなってほしい場合は「currentColor」にします！
+      // もし金色のままが良ければ、ここは「color: #c59f64;」に戻してくださいね。
+      color: currentColor; 
+      
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: normal;
+      // 💡5. 英語の文字もじわっと色が変わるようにお守り
+      transition: color 0.2s ease; 
+    }
+  }
+.nav-dropdown {
+    position: absolute;   // メインナビの下に浮かせる
+    top: 100%;            // 親(nav-item)の真下に配置
+    left: 0;
+    width: 100%;
+    background-color: #555; // ホバー時と同じ背景色
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    
+    // 💡 初期状態（閉じているとき）
+    overflow: hidden;
+    max-height: 0;        // 高さを0にして見えなくする
+    opacity: 0;           // 透明にする
+    visibility: hidden;   // キーボード操作なども無効化
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+
+    // 💡 JSで「.is-active」がついた時（開くとき）
+    &.is-active {
+      max-height: 300px;  // 開いたときの最大高さ（中身が収まる十分な数値）
+      opacity: 1;         // 不透明にする
+      visibility: visible;
+    }
+
+    // 下層メニューのリンクスタイル
+    li a {
+      padding: 15px 0;
+      font-size: 14px;
+      color: #fff;
+      display: block;
+      
+      &:hover {
+        background-color: #444; // 下層メニュー内でのホバー変化
+      }
+    }
+  }
+}
+}

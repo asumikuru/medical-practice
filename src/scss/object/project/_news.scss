@@ -1,0 +1,80 @@
+$color-border: rgba(0, 0, 0, 0.1); // 下に引く薄い線
+$color-category-bg: #eee;          // カテゴリの背景色
+$color-text-main: #333;            // メインの文字色
+$color-text-sub: #777;             // 日付の薄い文字色
+
+.p-news__inner{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+    
+    .c-heading-primary{
+        font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+        font-size: 25px;
+        color: #555;
+        letter-spacing: 0.15em;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 30px;
+
+        .en{
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           font-size: 40px;
+           color: #e4e2e2;
+           position: absolute;
+           bottom: 0px;
+           left: 30px;
+           z-index: -1;
+           
+        }
+    }
+.p-news {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid $color-border; // リストの一番上にも線を引くと綺麗に挟まれます
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+  &__item {
+    border-bottom: 1px solid $color-border; // ★ここに要素の下の薄い線を引いています
+  }
+
+  &__link {
+    display: flex;
+    align-items: center; // 縦方向の真ん中に揃える
+    gap: 20px;           // 日付・カテゴリ・タイトルの間の隙間
+    padding: 16px 8px;   // 上下左右の余白（クリックしやすくするため）
+    text-decoration: none;
+    color: $color-text-main;
+
+    // マウスを乗せたときに少し背景色を変える
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+  }
+
+  &__date {
+    font-size: 0.95rem;
+    color: $color-text-sub;
+  }
+
+  &__category {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    background-color: $color-category-bg;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin: 0; // pタグの余計な上下余白を消す
+    font-size: 1rem;
+    font-weight: bold;
+  }
+} 
+}
+

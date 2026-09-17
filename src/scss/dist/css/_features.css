@@ -1,0 +1,77 @@
+@charset "UTF-8";
+.p-features__inner {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+.p-features__inner .c-heading-primary {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-size: 25px;
+  color: #555;
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.p-features__inner .c-heading-primary .en {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  color: #e4e2e2;
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  z-index: -1;
+}
+.p-features__inner .p-features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.p-features__inner .p-features__list .p-features__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  width: 100%;
+}
+.p-features__inner .p-features__list .p-features__item:last-child {
+  margin-bottom: 0;
+}
+.p-features__inner .p-features__list .p-features__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.p-features__inner .p-features__list .p-features__item .p-features__img {
+  width: 50%;
+  flex-basis: 50%;
+  height: auto;
+}
+.p-features__inner .p-features__list .p-features__item .p-features__img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.p-features__inner .p-features__list .p-features__item .p-features__body {
+  width: 50%;
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 50px;
+  text-align: justify;
+}
+.p-features__inner .p-features__list .p-features__item .p-features__body .p-features__item-title {
+  font-size: 25px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.p-features__inner .p-features__list .p-features__item .p-features__body .p-features__item-title .p-features__item-number {
+  font-size: 70px;
+  color: #999;
+  font-style: italic;
+}
+.p-features__inner .p-features__list .p-features__item .p-features__body .p-features__item-text {
+  font-size: 16px;
+  color: #555;
+  white-space: normal;
+}

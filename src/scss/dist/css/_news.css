@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.p-news__inner {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+.p-news__inner .c-heading-primary {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-size: 25px;
+  color: #555;
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.p-news__inner .c-heading-primary .en {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  color: #e4e2e2;
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  z-index: -1;
+}
+.p-news__inner .p-news__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  max-height: 100px;
+  overflow-y: auto;
+}
+.p-news__inner .p-news__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.p-news__inner .p-news__link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 8px;
+  text-decoration: none;
+  color: #333;
+}
+.p-news__inner .p-news__link:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.p-news__inner .p-news__date {
+  font-size: 0.95rem;
+  color: #777;
+}
+.p-news__inner .p-news__category {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.p-news__inner .p-news__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
