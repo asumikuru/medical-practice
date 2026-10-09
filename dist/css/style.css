@@ -639,6 +639,14 @@ body {
   margin-bottom: 200px;
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
 }
+@media (max-width: 768px) {
+  .p-medical__inner {
+    margin-top: 110px;
+    margin-bottom: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .p-medical__inner .c-heading-primary {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   font-size: 25px;
@@ -659,17 +667,49 @@ body {
   left: 30px;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .p-medical__inner .c-heading-primary {
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .p-medical__inner .c-heading-primary .en {
+    font-size: 40px;
+    left: 20px;
+  }
+}
 .p-medical__inner .p-medical__lead {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 100px;
 }
+@media (max-width: 768px) {
+  .p-medical__inner .p-medical__lead {
+    font-size: 16px;
+    lign-height: 1.6;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .p-medical__inner .p-medical__list {
   display: flex;
   align-items: stretch;
   gap: 20px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .p-medical__inner .p-medical__list {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+  }
 }
 .p-medical__inner .p-medical__list .p-medical__item {
   background-color: #e4e2e2;
@@ -678,11 +718,24 @@ body {
   padding: 30px 20px;
   border-radius: 4px;
 }
+@media (max-width: 768px) {
+  .p-medical__inner .p-medical__list .p-medical__item {
+    width: 100%;
+  }
+}
 
 .p-schedule__inner {
   margin-top: 200px;
   margin-bottom: 200px;
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+@media (max-width: 768px) {
+  .p-schedule__inner {
+    margin-top: 110px;
+    margin-bottom: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .p-schedule__inner .c-heading-primary {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
@@ -704,17 +757,42 @@ body {
   left: 30px;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .p-schedule__inner .c-heading-primary {
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .p-schedule__inner .c-heading-primary .en {
+    font-size: 40px;
+    left: 20px;
+  }
+}
 .p-schedule__inner .p-schedule__table-wrapper {
   margin-bottom: 30px;
   margin-left: 100px;
   margin-right: 100px;
 }
+@media (max-width: 768px) {
+  .p-schedule__inner .p-schedule__table-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
 .p-schedule__inner .p-schedule__table-wrapper .p-schedule__table {
   width: 100%;
-  min-width: 300px;
   border-collapse: collapse;
   text-align: center;
   background-color: #fff;
+}
+@media (max-width: 768px) {
+  .p-schedule__inner .p-schedule__table-wrapper .p-schedule__table {
+    min-width: 600px;
+  }
 }
 .p-schedule__inner .p-schedule__table-wrapper .p-schedule__table thead {
   background-color: #e4e2e2;
@@ -725,6 +803,12 @@ body {
   font-size: 16px;
   font-weight: bold;
   border: 1px solid #cbd5e1;
+}
+@media (max-width: 768px) {
+  .p-schedule__inner .p-schedule__table-wrapper .p-schedule__table thead th {
+    font-size: 14px;
+    padding: 12px 5px;
+  }
 }
 .p-schedule__inner .p-schedule__table-wrapper .p-schedule__table tbody tr:nth-child(even) {
   background-color: white;
@@ -741,6 +825,12 @@ body {
   color: #475569;
   border: 1px solid #cbd5e1;
 }
+@media (max-width: 768px) {
+  .p-schedule__inner .p-schedule__table-wrapper .p-schedule__table tbody tr td {
+    font-size: 14px;
+    padding: 12px 5px;
+  }
+}
 .p-schedule__inner .p-schedule__note {
   font-size: 15px;
   color: #555;
@@ -748,11 +838,26 @@ body {
   padding: 0 10px;
   margin-left: 100px;
 }
+@media (max-width: 768px) {
+  .p-schedule__inner .p-schedule__note {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 13px;
+  }
+}
 
 .p-access__inner {
   margin-top: 200px;
   margin-bottom: 200px;
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+@media (max-width: 768px) {
+  .p-access__inner {
+    margin-top: 110px;
+    margin-bottom: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .p-access__inner .c-heading-primary {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
@@ -774,12 +879,40 @@ body {
   left: 30px;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .p-access__inner .c-heading-primary {
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .p-access__inner .c-heading-primary .en {
+    font-size: 40px;
+    left: 20px;
+  }
+}
 .p-access__inner .p-access__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 100px;
   margin-right: 100px;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content {
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content .p-access__info {
+    width: 100%;
+  }
 }
 .p-access__inner .p-access__content .p-access__info .p-access__clinic-name {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
@@ -788,6 +921,12 @@ body {
   font-size: 25px;
   margin-bottom: 50px;
 }
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content .p-access__info .p-access__clinic-name {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}
 .p-access__inner .p-access__content .p-access__info .p-access__text {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   color: #555;
@@ -795,8 +934,18 @@ body {
   font-size: 18px;
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content .p-access__info .p-access__text {
+    font-size: 15px;
+  }
+}
 .p-access__inner .p-access__content .p-access__info .p-access__way-list {
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content .p-access__info .p-access__way-list {
+    margin-top: 30px;
+  }
 }
 .p-access__inner .p-access__content .p-access__info .p-access__way-list .p-access__way-item {
   font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
@@ -804,4 +953,26 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content .p-access__info .p-access__way-list .p-access__way-item {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+}
+.p-access__inner .p-access__content .p-access__map {
+  width: 48%;
+  height: 400px;
+}
+.p-access__inner .p-access__content .p-access__map iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .p-access__inner .p-access__content .p-access__map {
+    width: 100%;
+    height: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */

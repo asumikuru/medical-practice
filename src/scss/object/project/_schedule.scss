@@ -1,9 +1,17 @@
-.p-schedule__inner{
+.p-schedule__inner {
     margin-top: 200px;
     margin-bottom: 200px;
     font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
 
-    .c-heading-primary{
+    // スマホ時のセクション余白（他のセクションと統一）
+    @media (max-width: 768px) {
+        margin-top: 110px;
+        margin-bottom: 80px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .c-heading-primary {
         font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
         font-size: 25px;
         color: #555;
@@ -11,70 +19,116 @@
         position: relative;
         display: inline-block;
         margin-bottom: 100px;
-         margin-left: 100px;
+        margin-left: 100px;
         margin-right: 100px;
 
         .en {
             font-family: Georgia, 'Times New Roman', Times, serif;
-           font-size: 40px;
-           color: #e4e2e2;
-           position: absolute;
-           bottom: 0px;
-           left: 30px;
-           z-index: -1;
+            font-size: 40px;
+            color: #e4e2e2;
+            position: absolute;
+            bottom: 0px;
+            left: 30px;
+            z-index: -1;
         }
-    
+
+        // スマホ時は他のセクションと完全に揃える
+        @media (max-width: 768px) {
+            display: inline-block;
+            font-size: 25px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 50px;
+
+            .en {
+                font-size: 40px;
+                left: 20px;
+            }
+        }
     }
-     .p-schedule__table-wrapper{
+
+    .p-schedule__table-wrapper {
         margin-bottom: 30px;
         margin-left: 100px;
         margin-right: 100px;
 
-        .p-schedule__table{
+        // 【ここが最大のポイントです！】
+        @media (max-width: 768px) {
+            margin-left: 20px;      // スマホ時は左右の100pxをリセットし、程よい余白（20px）にする
+            margin-right: 20px;
+            overflow-x: auto;       // 横方向にはみ出たテーブルを指でおしゃれにスクロールできるようにする
+            -webkit-overflow-scrolling: touch; // スマホでのスクロールをヌルヌルと滑らかにする
+        }
+
+        .p-schedule__table {
             width: 100%;
-            min-width: 300px; // 👈 スマホで見た時に、表が潰れず綺麗にスクロールさせるための指定
             border-collapse: collapse; // 線の隙間をなくして綺麗に一本にする
             text-align: center;
             background-color: #fff;
 
-            thead{
+            // スマホ用の指定
+            @media (max-width: 768px) {
+                // 表全体の項目数（月火水木金土日など）に合わせて、潰れない幅をキープします。
+                // 600px〜700pxほど確保しておくと、スマホ画面でも文字が縦伸びせず綺麗に読めます。
+                min-width: 600px; 
+            }
+
+            thead {
                 background-color: #e4e2e2;
                 color: #555;
 
-                th{
+                th {
                     padding: 10px 5px;
                     font-size: 16px;
                     font-weight: bold;
                     border: 1px solid #cbd5e1;
+                    
+                    @media (max-width: 768px) {
+                        font-size: 14px; // スマホでは少しだけ文字サイズをスリムに
+                        padding: 12px 5px; // 押しやすさ・見やすさのために上下の隙間を少し広げる
+                    }
                 }
             }
-            tbody{
 
-                tr{
-                     &:nth-child(even) {
-                    background-color: #ffff;
+            tbody {
+                tr {
+                    &:nth-child(even) {
+                        background-color: #ffff;
                     }
                     td:first-child {
-                    font-weight: bold;
-                    background-color: #f8fafc;
-                    color: #333;
-                    font-family: 'Helvetica Neue', Arial, sans-serif; // 数字を綺麗に見せる
+                        font-weight: bold;
+                        background-color: #f8fafc;
+                        color: #333;
+                        font-family: 'Helvetica Neue', Arial, sans-serif; // 数字を綺麗に見せる
                     }
                     td {
-                    padding: 10px 5px;
-                    font-size: 16px;
-                    color: #475569;
-                    border: 1px solid #cbd5e1; // 綺麗な薄いグレーの枠線
+                        padding: 10px 5px;
+                        font-size: 16px;
+                        color: #475569;
+                        border: 1px solid #cbd5e1; // 綺麗な薄いグレーの枠線
+
+                        @media (max-width: 768px) {
+                            font-size: 14px; // スマホでは少しだけ文字サイズをスリムに
+                            padding: 12px 5px;
+                        }
                     }
                 }
             }
         }
     }
+
     .p-schedule__note {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.8;
-            padding: 0 10px;
-            margin-left: 100px;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.8;
+        padding: 0 10px;
+        margin-left: 100px;
+
+        // スマホ用の注記の余白調整
+        @media (max-width: 768px) {
+            margin-left: 20px;  // テーブルの余白（20px）ときれいに左端を揃える
+            margin-right: 20px;
+            font-size: 13px;    // スマホ向けに少し文字を小さく
         }
+    }
 }

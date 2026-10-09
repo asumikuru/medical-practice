@@ -1,9 +1,17 @@
- .p-medical__inner{
+.p-medical__inner {
     margin-top: 200px;
     margin-bottom: 200px;
     font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
 
-    .c-heading-primary{
+    // スマホ用の設定（featuresセクションの余白感に合わせる）
+    @media (max-width: 768px) {
+        margin-top: 110px;  // featuresの110pxに合わせました
+        margin-bottom: 80px; // featuresの80pxに合わせました
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .c-heading-primary {
         font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
         font-size: 25px;
         color: #555;
@@ -11,11 +19,11 @@
         position: relative;
         display: inline-block;
         margin-bottom: 100px;
-         margin-left: 100px;
+        margin-left: 100px;
         margin-right: 100px;
 
         .en {
-            font-family: Georgia, 'Times New Roman', Times, serif;
+           font-family: Georgia, 'Times New Roman', Times, serif;
            font-size: 40px;
            color: #e4e2e2;
            position: absolute;
@@ -23,30 +31,65 @@
            left: 30px;
            z-index: -1;
         }
+
+        // 【ここをfeaturesの見出し設定と完全に揃えました！】
+        @media (max-width: 768px) {
+            display: inline-block; // inline-blockのまま維持
+            font-size: 25px;       // featuresと同じ25pxに固定
+            margin-left: 0;        // 左右の100pxの余白をリセット
+            margin-right: 0;
+            margin-bottom: 50px;   // features側とのバランスを見て調整（お好みで30px〜50pxに）
+
+            .en {
+                font-size: 40px;   // 英語のサイズもキープ
+                left: 20px;        // featuresと同じleft: 20px;に統一
+            }
+        }
     }
-    .p-medical__lead{
+
+    .p-medical__lead {
         text-align: center;
         font-size: 25px;
         font-weight: bold;
         margin-bottom: 100px;
-        
+
+        // スマホ用の設定（リード文の文字サイズと余白の調整）
+        @media (max-width: 768px) {
+            font-size: 16px;     // スマホで大きすぎないサイズに
+            lign-height: 1.6;      // 読みやすい行間に
+            margin-bottom: 40px; // リストとの隙間を少し狭く
+            padding-left: 10px;   // 左右の余白を少し確保
+            padding-right: 10px;
+        }
     }
 
-    .p-medical__list{
+    .p-medical__list {
         display: flex;
         align-items: stretch;
         gap: 20px;
         width: 100%;
-        
 
-        .p-medical__item{
+        // スマホ時は縦並びにして、中央揃えに
+        @media (max-width: 768px) {
+            flex-direction: column; // 縦並びに変更
+            align-items: center;    // 中身を中央揃えに
+            max-width: 100%;       // 横に広がりすぎないように上限を設定
+            margin-left: auto;      // リスト全体を画面の真ん中に
+            margin-right: auto;
+            gap: 10px;
+        }
+
+        .p-medical__item {
             background-color: #e4e2e2;
             border: solid 2px #555;
             text-align: center;
             padding: 30px 20px;
             border-radius: 4px;
 
+            // スマホ用の設定
+            @media (max-width: 768px) {
+                width: 100%; // 縦並びになったとき、幅を綺麗に揃える
+            }
         }
-
     }
- }
+}
