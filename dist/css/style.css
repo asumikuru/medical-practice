@@ -336,7 +336,7 @@ body {
   width: 100%;
   height: auto;
   height: 500px;
-  background-image: url("../../../../images/main-image.jpg");
+  background-image: url("/images/main-image.jpg");
   background-size: cover;
   position: relative;
   overflow: hidden;
