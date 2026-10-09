@@ -1,5 +1,7 @@
 
 <nav class="nav">
+  <input class="menu-checkbox" id="menu-toggle" type="checkbox" style="display: none;"/>
+  <label class="hamburger-btn" for="menu-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></label>
   <ul class="nav-list">
     <li class="nav-item"><a class="nav-link-item" href="#news">HOME</a></li>
     <li class="nav-item"><a class="nav-link-item" href="#features">医院紹介<span>Clinic</span></a>
@@ -11,15 +13,13 @@
       </div>
     </li>
     <li class="nav-item"><a class="nav-link-item" href="#medical">診療案内<span>Medical</span></a>
-      <div class="nav-accordion-content">
-        <ul>
-          <li><a href="#整形外科">整形外科</a></li>
-          <li><a href="#リハビリ">リハビリテーション科</a></li>
-        </ul>
-      </div>
+      <ul class="nav-dropdown">
+        <li><a href="#整形外科">整形外科</a></li>
+        <li><a href="#リハビリ">リハビリテーション科</a></li>
+      </ul>
     </li>
-    <li class="nav-item"><a class="nav-link-item" href="#medical">診療時間</a><span>Time</span></li>
-    <li class="nav-item"><a class="nav-link-item" href="#access">採用情報</a><span>Recruit </span></li>
-    <li class="nav-item"><a class="nav-link-item" href="#access">アクセス</a><span>Access</span></li>
+    <li class="nav-item"><a class="nav-link-item" href="#medical">診療時間<span>Time</span></a></li>
+    <li class="nav-item"><a class="nav-link-item" href="#access">採用情報<span>Recruit</span></a></li>
+    <li class="nav-item"><a class="nav-link-item" href="#access">アクセス<span>Access</span></a></li>
   </ul>
 </nav>

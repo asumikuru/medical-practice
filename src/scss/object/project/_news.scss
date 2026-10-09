@@ -3,14 +3,19 @@ $color-category-bg: #eee;          // カテゴリの背景色
 $color-text-main: #333;            // メインの文字色
 $color-text-sub: #777;             // 日付の薄い文字色
 
-.p-news__inner{
+.p-news__inner {
     margin-top: 200px;
     margin-bottom: 200px;
     margin-right: 100px;
     margin-left: 100px;
     font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
     
-    .c-heading-primary{
+    // スマホ時は上下余白をコンパクトにし、左右の狭まりを解消
+    @media (max-width: 768px) {
+        margin: 60px 0;
+    }
+    
+    .c-heading-primary {
         font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
         font-size: 25px;
         color: #555;
@@ -19,7 +24,7 @@ $color-text-sub: #777;             // 日付の薄い文字色
         display: inline-block;
         margin-bottom: 30px;
 
-        .en{
+        .en {
            font-family: Georgia, 'Times New Roman', Times, serif;
            font-size: 40px;
            color: #e4e2e2;
@@ -27,54 +32,91 @@ $color-text-sub: #777;             // 日付の薄い文字色
            bottom: 0px;
            left: 30px;
            z-index: -1;
-           
+        }
+
+        // スマホ時の見出しサイズ調整（_features.scssと統一）
+        @media (max-width: 768px) {
+            font-size: 25px;
+            margin-bottom: 30px;
+
+            .en {
+                font-size: 40px;
+                left: 20px;
+            }
         }
     }
-.p-news {
-  &__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid $color-border; // リストの一番上にも線を引くと綺麗に挟まれます
-    max-height: 100px;
-    overflow-y: auto;
+
+    .p-news {
+        &__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-top: 1px solid $color-border;
+            max-height: 100px;
+            overflow-y: auto;
+
+            // スマホ時は高さを少し広げて見やすく
+            @media (max-width: 768px) {
+                max-height: 220px;
+            }
+        }
+
+        &__item {
+            border-bottom: 1px solid $color-border;
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 16px 8px;
+            text-decoration: none;
+            color: $color-text-main;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.02);
+            }
+
+            // スマホ時は折り返して2段組みに
+            @media (max-width: 768px) {
+                flex-wrap: wrap;
+                gap: 8px 12px;
+                padding: 14px 4px;
+            }
+        }
+
+        &__date {
+            font-size: 0.95rem;
+            color: $color-text-sub;
+
+            @media (max-width: 768px) {
+                font-size: 0.85rem;
+            }
+        }
+
+        &__category {
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            background-color: $color-category-bg;
+            border-radius: 4px;
+
+            @media (max-width: 768px) {
+                font-size: 0.75rem;
+                padding: 2px 8px;
+            }
+        }
+
+        &__title {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bold;
+
+            // スマホ時は横幅100%にして2行目に落とす
+            @media (max-width: 768px) {
+                width: 100%;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+        }
+    } 
 }
-
-  &__item {
-    border-bottom: 1px solid $color-border; // ★ここに要素の下の薄い線を引いています
-  }
-
-  &__link {
-    display: flex;
-    align-items: center; // 縦方向の真ん中に揃える
-    gap: 20px;           // 日付・カテゴリ・タイトルの間の隙間
-    padding: 16px 8px;   // 上下左右の余白（クリックしやすくするため）
-    text-decoration: none;
-    color: $color-text-main;
-
-    // マウスを乗せたときに少し背景色を変える
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.02);
-    }
-  }
-
-  &__date {
-    font-size: 0.95rem;
-    color: $color-text-sub;
-  }
-
-  &__category {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-    background-color: $color-category-bg;
-    border-radius: 4px;
-  }
-
-  &__title {
-    margin: 0; // pタグの余計な上下余白を消す
-    font-size: 1rem;
-    font-weight: bold;
-  }
-} 
-}
-

@@ -1,9 +1,17 @@
-.p-features__inner{
+.p-features__inner {
     margin-top: 200px;
     margin-bottom: 200px;
     font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
     
-    .c-heading-primary{
+    // スマホ時のセクション余白（上のnewsとの間隔をしっかり確保）
+    @media (max-width: 768px) {
+        margin-top: 110px;
+        margin-bottom: 80px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .c-heading-primary {
         font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
         font-size: 25px;
         color: #555;
@@ -11,10 +19,10 @@
         position: relative;
         display: inline-block;
         margin-bottom: 50px;
-         margin-left: 100px;
+        margin-left: 100px;
         margin-right: 100px;
 
-        .en{
+        .en {
            font-family: Georgia, 'Times New Roman', Times, serif;
            font-size: 40px;
            color: #e4e2e2;
@@ -23,13 +31,27 @@
            left: 30px;
            z-index: -1;
         }
+
+        // スマホ時は左右の100px余白を解除し、文字サイズを最適化
+        @media (max-width: 768px) {
+            font-size: 25px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 30px;
+
+            .en {
+                font-size: 40px;
+                left: 20px;
+            }
+        }
     }
-    .p-features__list{
+
+    .p-features__list {
         margin: 0;
         padding: 0;
         list-style: none;
 
-        .p-features__item{
+        .p-features__item {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -40,49 +62,101 @@
                 margin-bottom: 0;
             }
 
-             &:nth-child(even) {
+            &:nth-child(even) {
                 flex-direction: row-reverse;
             }
-             .p-features__img{
+
+            // スマホ時は縦並び（画像が上、テキストが下）に統一
+            @media (max-width: 768px) {
+                flex-direction: column !important;
+                margin-bottom: 90px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .p-features__img {
                 width: 50%;
                 flex-basis: 50%;
                 height: auto;
 
-                img{
+                img {
                     width: 100%;
                     height: auto;
                     display: block;
                     object-fit: cover;
                 }
-             }
-             .p-features__body{
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    flex-basis: auto;
+                    order: 2; // 2番目に表示（画像）
+                    margin-bottom: 20px;
+
+                    img {
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            .p-features__body {
                 width: 50%;
                 flex-basis: 50%;
                 box-sizing: border-box;
                 padding: 50px;
                 text-align: justify;
-                
 
-                .p-features__item-title{
+                // スマホ時はラッパーを透明化して子要素を直接並び替え可能にする
+                @media (max-width: 768px) {
+                    display: contents;
+                }
+
+                .p-features__item-title {
                     font-size: 25px;
                     color: #555;
                     margin-bottom: 20px;
 
-                    .p-features__item-number{
+                    .p-features__item-number {
                         font-size: 70px;
                         color: #999;
                         font-style: italic;
 
+                        @media (max-width: 768px) {
+                            font-size: 48px;
+                            line-height: 1;
+                            display: inline-block;
+                            margin-bottom: 8px;
+                        }
                     }
 
+                    @media (max-width: 768px) {
+                        order: 1; // 1番目に表示（タイトル）
+                        width: 100%;
+                        font-size: 20px;
+                        margin-bottom: 16px;
+                        line-height: 1.4;
+                    }
                 }
-                .p-features__item-text{
+
+                .p-features__item-text {
                     font-size: 16px;
                     color: #555;
                     white-space: normal;
+                    margin: 0 0 8px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    @media (max-width: 768px) {
+                        order: 3; // 3番目に表示（テキスト）
+                        width: 100%;
+                        font-size: 14px;
+                        line-height: 1.7;
+                    }
                 }
-             }
+            }
         }
     }
-        
 }

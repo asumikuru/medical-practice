@@ -1,4 +1,14 @@
 nav.nav
+    //- 1. ハンバーガーメニュー用のチェックボックス（CSS開閉用）
+    input#menu-toggle.menu-checkbox(type="checkbox" style="display: none;")
+
+    //- 2. スマホ時のみ表示する三本線ボタン
+    label.hamburger-btn(for="menu-toggle")
+        span.bar
+        span.bar
+        span.bar
+
+    //- 3. メニュー本体（input, label と同じ高さのインデントに並べる）
     ul.nav-list
         li.nav-item
             a.nav-link-item(href="#news") HOME
@@ -14,17 +24,19 @@ nav.nav
             a.nav-link-item(href="#medical")
                 | 診療案内
                 span Medical
-            .nav-accordion-content
-                ul
-                    li: a(href="#整形外科") 整形外科
-                    li: a(href="#リハビリ") リハビリテーション科
-
+            //- ↓ここが中に入り込んでしまっていたので、外に出して位置を修正しました
+            ul.nav-dropdown
+                li: a(href="#整形外科") 整形外科
+                li: a(href="#リハビリ") リハビリテーション科
         li.nav-item
-            a.nav-link-item(href="#medical") 診療時間
-            span Time
+            a.nav-link-item(href="#medical")
+                | 診療時間
+                span Time
         li.nav-item
-            a.nav-link-item(href="#access") 採用情報
-            span Recruit 
+            a.nav-link-item(href="#access")
+                | 採用情報
+                span Recruit
         li.nav-item
-            a.nav-link-item(href="#access") アクセス
-            span Access
+            a.nav-link-item(href="#access")
+                | アクセス
+                span Access

@@ -1,0 +1,80 @@
+.p-schedule__inner{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+
+    .c-heading-primary{
+        font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
+        font-size: 25px;
+        color: #555;
+        letter-spacing: 0.15em;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 100px;
+         margin-left: 100px;
+        margin-right: 100px;
+
+        .en {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+           font-size: 40px;
+           color: #e4e2e2;
+           position: absolute;
+           bottom: 0px;
+           left: 30px;
+           z-index: -1;
+        }
+    
+    }
+     .p-schedule__table-wrapper{
+        margin-bottom: 30px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+        .p-schedule__table{
+            width: 100%;
+            min-width: 300px; // 👈 スマホで見た時に、表が潰れず綺麗にスクロールさせるための指定
+            border-collapse: collapse; // 線の隙間をなくして綺麗に一本にする
+            text-align: center;
+            background-color: #fff;
+
+            thead{
+                background-color: #e4e2e2;
+                color: #555;
+
+                th{
+                    padding: 10px 5px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border: 1px solid #cbd5e1;
+                }
+            }
+            tbody{
+
+                tr{
+                     &:nth-child(even) {
+                    background-color: #ffff;
+                    }
+                    td:first-child {
+                    font-weight: bold;
+                    background-color: #f8fafc;
+                    color: #333;
+                    font-family: 'Helvetica Neue', Arial, sans-serif; // 数字を綺麗に見せる
+                    }
+                    td {
+                    padding: 10px 5px;
+                    font-size: 16px;
+                    color: #475569;
+                    border: 1px solid #cbd5e1; // 綺麗な薄いグレーの枠線
+                    }
+                }
+            }
+        }
+    }
+    .p-schedule__note {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.8;
+            padding: 0 10px;
+            margin-left: 100px;
+        }
+}

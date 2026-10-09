@@ -28,6 +28,7 @@
   font-size: 32px;
   line-height: 2.0;
   color: #fff; // 💡もし画像の上に載せて見えにくければ #fff (白) に変えてみてくださいね
+  text-shadow: 0 0 4px #777,0 0 12px #777,0 0 20px #777;
   font-weight: 600;
 }
 
@@ -35,6 +36,7 @@
   font-family: '游明朝', 'Yu Mincho', YuMincho, 'Hiragino Mincho Pro', serif;
   font-size: 20px;
   color: #ffff;
+  text-shadow: 0 0 4px #555,0 0 12px #555,0 0 20px #555;
   margin-top: 20px;
   font-weight: bold;
   letter-spacing: 0.1em;

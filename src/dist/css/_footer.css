@@ -1,0 +1,11 @@
+.l-footer__inner {
+  width: 100%;
+  background-color: #555;
+}
+.l-footer__inner .l-footer__copyright {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #ffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

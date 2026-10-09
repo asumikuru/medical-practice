@@ -26,6 +26,11 @@
   background-color: #555;
   color: #fff;
 }
+.nav .nav-item:hover .nav-dropdown {
+  max-height: 300px;
+  opacity: 1;
+  visibility: visible;
+}
 .nav .nav-item a {
   display: flex;
   flex-direction: column;
@@ -76,4 +81,88 @@
 }
 .nav .nav-item .nav-dropdown li a:hover {
   background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+  }
+  .nav::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 199;
+  }
+  .nav .hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    position: fixed;
+    top: 26px;
+    right: 20px;
+    z-index: 202;
+  }
+  .nav .hamburger-btn .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+  }
+  .nav .nav-list {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 201;
+  }
+  .nav .nav-list .nav-item {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  .nav .nav-list .nav-item:hover {
+    background-color: transparent;
+    color: #333;
+  }
+  .nav .nav-list .nav-item a {
+    align-items: flex-start;
+    padding: 15px 0;
+    color: #333;
+  }
+  .nav .nav-list .nav-item a span {
+    display: inline;
+    margin-left: 10px;
+    color: #999;
+  }
+  .nav .menu-checkbox:checked ~ .nav-list {
+    display: flex;
+  }
+  .nav .menu-checkbox:checked ~ .hamburger-btn .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav .menu-checkbox:checked ~ .hamburger-btn .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .nav .menu-checkbox:checked ~ .hamburger-btn .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.p-schedule__inner {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+.p-schedule__inner .c-heading-primary {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-size: 25px;
+  color: #555;
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.p-schedule__inner .c-heading-primary .en {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 40px;
+  color: #e4e2e2;
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  z-index: -1;
+}
+.p-schedule__inner .p-schedule__table-wrapper {
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.p-schedule__inner .p-schedule__table-wrapper .p-schedule__table {
+  width: 100%;
+  min-width: 300px;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #fff;
+}
+.p-schedule__inner .p-schedule__table-wrapper .p-schedule__table thead {
+  background-color: #e4e2e2;
+  color: #555;
+}
+.p-schedule__inner .p-schedule__table-wrapper .p-schedule__table thead th {
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #cbd5e1;
+}
+.p-schedule__inner .p-schedule__table-wrapper .p-schedule__table tbody tr:nth-child(even) {
+  background-color: #ffff;
+}
+.p-schedule__inner .p-schedule__table-wrapper .p-schedule__table tbody tr td:first-child {
+  font-weight: bold;
+  background-color: #f8fafc;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.p-schedule__inner .p-schedule__table-wrapper .p-schedule__table tbody tr td {
+  padding: 10px 5px;
+  font-size: 16px;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+.p-schedule__inner .p-schedule__note {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  padding: 0 10px;
+  margin-left: 100px;
+}
